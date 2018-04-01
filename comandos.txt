@@ -1,0 +1,5 @@
+idlj -fall Mat.idl
+javac eagz/org/*.java Calculator/*.java
+start orbd -ORBInitialPort 1050
+java eagz.org.ServerORB -ORBInitialPort 1050 -ORBInitialHost localhost
+java eagz.org.ClientORB -ORBInitialPort 1050 -ORBInitialHost localhost

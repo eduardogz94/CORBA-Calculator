@@ -1,0 +1,11 @@
+module Calculator{
+    interface Calc{
+        float sum(in float x, in float y);
+        float rest(in float x, in float y);
+        float mult(in float x, in float y);
+        float divi(in float x, in float y);
+        float pot(in float x, in float y);
+        float square(in float x, in float y);
+        oneway void shutdown();
+    };
+};
