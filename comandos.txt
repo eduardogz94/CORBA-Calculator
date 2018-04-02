@@ -1,5 +1,6 @@
-idlj -fall Mat.idl
-javac src/eagz/org/*.java src/Calc/*.java
+cd documents/github/corbacalculator
+idlj -fall Calculator.idl
+javac eagz/org/*.java Calc/*.java
 start orbd -ORBInitialPort 1050
-java src.eagz.org.ServerORB -ORBInitialPort 1050 -ORBInitialHost localhost
+java eagz.org.ServerORB -ORBInitialPort 1050 -ORBInitialHost localhost
 java eagz.org.ClientORB -ORBInitialPort 1050 -ORBInitialHost localhost

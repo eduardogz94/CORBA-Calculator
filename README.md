@@ -1,0 +1,1 @@
+A CORBA Calculator, entering 2 digits will consume all methods.
