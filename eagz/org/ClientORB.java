@@ -27,63 +27,59 @@ public class ClientORB {
 			do{
 				x = true;
 				float a,b;
-				System.out.println("\n\nCalculadora de 2 variables by mundo\n\n"
-						+ "1.Suma.\n2.Resta.\n3.Multiplicacion.\n4.Divicion.\n"
-						+ "5.Potencia.\n6.Raiz.\n0.Salir.\nEleccion: ");
+				System.out.println("\n\nCORBA Calculator" + "\n1.Add.\n2.Rest.\n3.Multiplication.\n4.Division.\n"
+						+ "5.Pot.\n6.Square.\n0.Exit.\nOption-> ");
 				a = sc.nextInt();
+				
 				switch((int)a) {
 					case 0 : x = false; break;
+					
 					case 1 :
-						System.out.println("\nSUMA.\nIngrese primer valor: ");
+						System.out.println("\nSUM.\n1st value: ");
 						a = sc.nextFloat();
-						System.out.println("\nIngrese segundo valor: ");
+						System.out.println("\n2nd value: ");
 						b = sc.nextFloat();
-						System.out.println("\nResultado: "
-								+Float.toString(CalcImpl.sum(a, b)));
+						System.out.println("\nResult: "+Float.toString(CalcImpl.sum(a, b)));
 						break;
+					
 					case 2 :
-						System.out.println("\nRESTA.\nIngrese primer valor: ");
+						System.out.println("\nREST.\n1st value: ");
 						a = sc.nextFloat();
-						System.out.println("\nIngrese segundo valor: ");
+						System.out.println("\n2nd value: ");
 						b = sc.nextFloat();
-						System.out.println("\nResultado: "
-								+Float.toString(CalcImpl.rest(a, b)));
+						System.out.println("\nResult: "+Float.toString(CalcImpl.rest(a, b)));
 						break;
+					
 					case 3 :
-						System.out.println("\nMULTIPLICACION.\n"
-								+ "Ingrese primer valor: ");
+						System.out.println("\nMULTIPLICATION.\n1st value: ");
 						a = sc.nextFloat();
-						System.out.println("\nIngrese segundo valor: ");
+						System.out.println("\n2nd value: ");
 						b = sc.nextFloat();
-						System.out.println("\nResultado: "
-								+Float.toString(CalcImpl.mult(a, b)));
+						System.out.println("\nResult: "+Float.toString(CalcImpl.mult(a, b)));
 						break;
+					
 					case 4 :
-						System.out.println("\nDIVICION.\n"
-								+ "Ingrese primer valor: ");
+						System.out.println("\nDIVITION.\n1st value: ");
 						a = sc.nextFloat();
-						System.out.println("\nIngrese segundo valor: ");
+						System.out.println("\n2nd value: ");
 						b = sc.nextFloat();
-						System.out.println("\nResultado: "
-								+Float.toString(CalcImpl.divi(a, b)));
+						System.out.println("\nResult: "+Float.toString(CalcImpl.divi(a, b)));
 						break;
+					
 					case 5 :
-						System.out.println("\nPOTENCIACION.\n"
-								+ "Ingrese el numero base: ");
+						System.out.println("\nPOT.\n"+ "Base number: ");
 						a = sc.nextFloat();
-						System.out.println("\nIngrese la potencia: ");
+						System.out.println("\nPotency value: ");
 						b = sc.nextFloat();
-						System.out.println("\nResultado: "
-								+Float.toString(CalcImpl.pot(a, b)));
+						System.out.println("\nResult: "+Float.toString(CalcImpl.pot(a, b)));
 						break;
+					
 					case 6 :
-						System.out.println("\nRAIZ.\n"
-								+ "Ingrese numero: ");
+						System.out.println("\nRAIZ.\n"+ "Number value: ");
 						a = sc.nextFloat();
-						System.out.println("\nIngrese la base de la raiz: ");
+						System.out.println("\nBase: ");
 						b = sc.nextFloat();
-						System.out.println("\nResultado: "
-								+Float.toString(CalcImpl.square(a, b)));
+						System.out.println("\nResult: "+Float.toString(CalcImpl.square(a, b)));
 						break;
 				}	
 			}

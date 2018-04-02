@@ -47,18 +47,21 @@ class CalcImpl extends CalcPOA {
 }
 
 public class ServerORB {
+	
 	public static void main(String args[]) {
 	try {
 		ORB orb = ORB.init(args, null); //inicializacion de conexion
 		POA rootpoa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));//abrimos el root del POA
 		rootpoa.the_POAManager().activate();
+		
 		CalcImpl calcImpl = new CalcImpl(); //implementamos referencia
 		calcImpl.setORB(orb); //seteamos ORB
+		
 		org.omg.CORBA.Object ref = rootpoa.servant_to_reference(calcImpl);
 		Calc href = CalcHelper.narrow(ref);
 		org.omg.CORBA.Object objRef = orb.resolve_initial_references("NameService");//le damos nombre al servicio
 		NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
-		NameComponent path[] = ncRef.to_name("calc");//se envia el nombre para que resiba la interface
+		NameComponent path[] = ncRef.to_name("calc");//se envia el nombre para que reciba la interface
 		ncRef.rebind(path, href);
 		System.out.println("Server ORB waiting");//confirmacion de servidor conectado
 		orb.run();
